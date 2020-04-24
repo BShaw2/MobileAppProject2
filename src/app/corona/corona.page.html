@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button [text]="Back"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Global Stats</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  
+    <li *ngFor="let cases of CoronaData">
+      <h2>All time</h2>
+      <p>     Total cases: {{cases.total_cases}}</p>
+      <p>     Total deaths: {{cases.total_deaths}}</p>
+      <br>
+      <h2>Daily</h2>
+      <p>     Total new cases: {{cases.total_new_cases_today}}</p>
+      <p>     Total new deaths: {{cases.total_new_deaths_today}}</p>
+    </li>
+  
+
+</ion-content>
